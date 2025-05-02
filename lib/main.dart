@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'API/api.dart';
 import 'API/cubit/post_cubit.dart';
 import 'cubit/counter_cubit.dart';
-import 'home.dart';
+import 'presentation/screens/home.dart';
 
 void main() {
   runApp(const MyApp());

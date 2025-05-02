@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'cubit/counter_cubit.dart';
-import 'widgets/counterV2.dart';
+import '../../cubit/counter_cubit.dart';
+import '../widgets/counterV2.dart';
 
 class HomePage2 extends StatefulWidget {
   const HomePage2({super.key});

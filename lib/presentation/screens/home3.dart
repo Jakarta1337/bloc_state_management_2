@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'cubit/counter_cubit.dart';
-import 'widgets/counterV4.dart';
+import '../../../../cubit/counter_cubit.dart';
+import '../widgets/counterV3.dart';
 
-class HomePage4 extends StatefulWidget {
-  const HomePage4({super.key});
+class HomePage3 extends StatefulWidget {
+  const HomePage3({super.key});
 
   @override
-  State<HomePage4> createState() => _HomePage4State();
+  State<HomePage3> createState() => _HomePage3State();
 }
 
-class _HomePage4State extends State<HomePage4> {
+class _HomePage3State extends State<HomePage3> {
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text("BlocConsumer"),
+          Text("BlocListener"),
           Counter(
             onPressed1: () {
               context.read<CounterCubit>().increment(1);
