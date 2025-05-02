@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../cubit/counter_cubit.dart';
+import '../../counter/cubit/counter_cubit.dart';
 
 class Counter extends StatefulWidget {
   final void Function()? onPressed1;

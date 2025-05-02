@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../API/api.dart';
-import '../../cubit/counter_cubit.dart';
+import '../../counter/cubit/counter_cubit.dart';
 import 'home2.dart';
 import 'home3.dart';
 import 'home4.dart';

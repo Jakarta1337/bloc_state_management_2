@@ -1,4 +1,5 @@
-import 'package:bloc_state_management_2/API/cubit/post_cubit.dart';
+import 'package:bloc_state_management_2/API/bloc/post_bloc.dart';
+// import 'package:bloc_state_management_2/API/cubit/post_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,13 +13,15 @@ class APIPage extends StatefulWidget {
 class _APIPageState extends State<APIPage> {
   @override
   void initState() {
-    context.read<PostCubit>().fetchPosts();
+    // context.read<PostCubit>().fetchPosts();
+    context.read<PostBloc>().add(FetchPostEvent());
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PostCubit, PostState>(
+    // return BlocBuilder<PostCubit, PostState>(
+    return BlocBuilder<PostBloc, PostState>(
       builder: (context, state) {
         if (state is PostLoading) {
           return Center(child: CircularProgressIndicator());
@@ -36,7 +39,8 @@ class _APIPageState extends State<APIPage> {
         } else if (state is PostError) {
           return InkWell(
             onTap: () {
-              context.read<PostCubit>().fetchPosts();
+              // context.read<PostCubit>().fetchPosts();
+              context.read<PostBloc>().add(FetchPostEvent());
             },
             child: Center(child: Text("CHECK YOUR CODE :/")),
           );
