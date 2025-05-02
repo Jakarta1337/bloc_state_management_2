@@ -64,9 +64,7 @@ class _HomePage1State extends State<HomePage1> {
         onTap: _onTabTapped,
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         selectedItemColor: Theme.of(context).colorScheme.onPrimaryContainer,
-        unselectedItemColor: Theme.of(
-          context,
-        ).colorScheme.onSurface.withOpacity(0.6),
+        unselectedItemColor: Theme.of(context).colorScheme.onSurface,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.check), label: 'Builder'),
           BottomNavigationBarItem(icon: Icon(Icons.check), label: 'Selector'),

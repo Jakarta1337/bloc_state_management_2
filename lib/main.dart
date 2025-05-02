@@ -6,8 +6,10 @@ import 'API/api.dart';
 import 'API/bloc/post_bloc.dart';
 import 'counter/cubit/counter_cubit.dart';
 import 'presentation/screens/home.dart';
+import 'presentation/screens/observer.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 
